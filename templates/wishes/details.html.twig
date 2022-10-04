@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello WishesController!{% endblock %}
+
+{% block main %}
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <h1>{{ wish.title }}</h1>
+                <p>Par {{ wish.author }} dans la catégorie {{ wish.category.name }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <h3>{{ wish.description }}</h3>
+            <p>Posté le {{ wish.dateCreated | date('d/m/Y') }}</p>
+        </div>
+        <p>Bravo, {{ wish.author }} c'est une bonne idée de merde avant de crever</p>
+    </div>
+
+
+{% endblock %}
